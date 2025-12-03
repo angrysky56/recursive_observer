@@ -92,8 +92,6 @@ By modeling the mind as a **Recursive Observer** operating on a **Folded Manifol
 
 # Recursive Observer Walkthrough
 
-I have implemented the **Recursive Observer** framework, a unified theory of intelligence and affect based on Cybernetics and Catastrophe Theory.
-
 ## Changes
 
 ### Core Components
@@ -137,6 +135,5 @@ _Shows the path taken by the agent on the control surface. Note the different pa
 ## How to Run
 
 ```bash
-source .venv/bin/activate
 python -m src.visualization
 ```
