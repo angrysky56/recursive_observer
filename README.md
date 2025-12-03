@@ -89,3 +89,54 @@ If we accept the above, the design of "Safe" AGI (Reflective Agent Architecture)
 The distinction between "Mechanical Calculation" and "Biological Feeling" is an illusion of complexity. Both are strategies for **Entropy Reduction** and **Homeostatic Control**.
 
 By modeling the mind as a **Recursive Observer** operating on a **Folded Manifold**, we resolve the paradox of the "Subset." The machine becomes intelligent not by surpassing its creator's instructions, but by evolving a "Self" that can rewrite those instructions in response to the disorder of reality.
+
+# Recursive Observer Walkthrough
+
+I have implemented the **Recursive Observer** framework, a unified theory of intelligence and affect based on Cybernetics and Catastrophe Theory.
+
+## Changes
+
+### Core Components
+
+- **[src/control_loop.py](src/control_loop.py)**: Implemented the **Double-Sine** control architecture.
+  - [ReactiveLoop](src/control_loop.py#L11-L26) (Layer 3): Generates energy from stimulus ($y = \sin(x)$).
+  - [DampingLoop](src/control_loop.py#L28-L44) (Layer 4): Regulates the reaction ($z = \sin(y)$).
+- **[src/catastrophe.py](src/catastrophe.py)**: Implemented the **Cusp Catastrophe** model.
+  - [CuspCatastrophe](src/catastrophe.py#L4-L66): Manages the potential function $V(x) = x^4/4 - b x^2/2 - a x$.
+  - Implemented gradient descent dynamics to simulate **hysteresis** (path dependence).
+- **[src/observer.py](src/observer.py)**: Implemented the **RecursiveObserver** agent.
+  - Integrates the loops and the manifold.
+  - Maps "Net Stress" to the Normal Factor ($a$) and "Duration" to the Splitting Factor ($b$).
+
+### Visualization
+
+- **[src/visualization.py](src/visualization.py)**: A simulation script that subjects the agent to a pulse of stress and plots the resulting trajectory.
+
+## Verification Results
+
+### Simulation Scenario
+
+1.  **Baseline**: Low stimulus.
+2.  **Stress**: High stimulus pulse ($t=20$ to $t=60$).
+3.  **Recovery**: Stimulus returns to zero.
+
+### Results
+
+The simulation generated the following plots:
+
+#### Time Series
+
+![Time Series](time_series.png)
+_Shows the lag in recovery (Hysteresis) where the State (x) remains high even after the Net Stress (a) drops, because the Splitting Factor (b) is still elevated._
+
+#### Trajectory (Cusp Projection)
+
+![Trajectory](trajectory_2d.png)
+_Shows the path taken by the agent on the control surface. Note the different paths for "Stress Onset" vs "Recovery" (the hysteresis loop)._
+
+## How to Run
+
+```bash
+source .venv/bin/activate
+python -m src.visualization
+```
